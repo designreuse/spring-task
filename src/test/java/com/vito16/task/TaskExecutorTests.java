@@ -17,6 +17,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
+ * 任务执行单元测试
+ *
  * @author 木鱼 muyu@yiji.com
  * @version 2015/08/17
  */
