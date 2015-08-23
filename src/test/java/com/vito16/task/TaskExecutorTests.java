@@ -10,6 +10,8 @@
 package com.vito16.task;
 
 import com.vito16.task.config.AppConfig;
+import com.yjf.common.log.Logger;
+import com.yjf.common.log.LoggerFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +27,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
 public class TaskExecutorTests {
+    public static final Logger logger = LoggerFactory.getLogger(TaskExecutorTests.class);
     @Autowired
     private Printer printer;
 
     @Test
     public void testRunTask(){
         printer.printMessages();
+        logger.info("方法调用完毕...");
     }
 
 }
